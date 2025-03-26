@@ -1,14 +1,21 @@
-<p id="hello">
-    Hello World
-</p>
-<button onclick="change()">Change</button>
-
+<h1>Guess the number</h1>
+<input id="guessedNumber">
+<button onclick="check()">Check</button>
+<p id="result">You are Right/Wrong</p>
 <script>
-    var para = document.getElementById("hello");
-
-    function change(){
-        console.log(para.textContent);
-        para.textContent = "Bye World"
+    var guessedNumber = document.getElementById("guessedNumber");
+    var result = document.getElementById("result");
+    var randomNumber = Math.floor(Math.random()*10)+1;
+    function check(){
+        var enteredNumber = Number(guessedNumber.value);
+        if(randomNumber==enteredNumber){
+            console.log("Right")
+            result.textContent="Right"
+            alert("You Won!")
+        }
+        else{    
+            console.log("Wrong")
+            result.textContent="Wrong"
+        }
     }
 </script>
-

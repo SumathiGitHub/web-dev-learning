@@ -1,0 +1,14 @@
+<p id="hello">
+    Hello World
+</p>
+<button onclick="change()">Change</button>
+
+<script>
+    var para = document.getElementById("hello");
+
+    function change(){
+        console.log(para.textContent);
+        para.textContent = "Bye World"
+    }
+</script>
+
